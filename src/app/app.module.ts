@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import {RouterModule} from '@angular/router';
+import { PushComponent } from './push/push.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
    declarations: [
       AppComponent,
-      HomeComponent
+      HomeComponent,
+      PushComponent,
+      AboutMeComponent
    ],
    imports: [
       BrowserModule,
