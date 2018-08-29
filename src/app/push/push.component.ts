@@ -32,7 +32,7 @@ export class PushComponent implements OnInit {
   sendEmail() {
     this.sendService.sendEmail(this.email, this.bookDir).subscribe(
       (datas) => {
-        console.log(datas);
+        alert(datas['message']);
       }
     );
   }
