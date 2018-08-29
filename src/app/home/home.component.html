@@ -1,43 +1,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-8">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>
-              #
-            </th>
-            <th>
-              BooK
-            </th>
-            <th>
-              Author
-            </th>
-            <th>
-              Select
-            </th>
-          </tr>
-        </thead>
+      <router-outlet></router-outlet>
+      <ngb-pagination [collectionSize]="120" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"
+      (pageChange)="selectPage()">
 
-        <tbody *ngFor="let book of bookList" >
-          <tr class="table-success">
-            <td>
-              2
-            </td>
-            <td>
-              {{book.name}}
-            </td>
-            <td>
-              {{book.author}}
-            </td>
-            <td>
-              <button type="button" class="btn btn-success" (click)="pushBook(book.name)">Push</button>
-            </td>
-          </tr>
-
-        </tbody>
-      </table>
-      <ngb-pagination [collectionSize]="120" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
+      </ngb-pagination>
     </div>
     <div class="col-md-4">
       <ol>
