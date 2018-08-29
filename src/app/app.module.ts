@@ -1,3 +1,4 @@
+import { BookService } from './service/book.service';
 import { AppRoutes } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,8 @@ import { PushComponent } from './push/push.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { AboutKindlePushComponent } from './about-kindle-push/about-kindle-push.component';
+import { SendService } from './service/send.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
    declarations: [
@@ -25,9 +28,10 @@ import { AboutKindlePushComponent } from './about-kindle-push/about-kindle-push.
       NgbModule,
       HttpClientModule,
       RouterModule,
-      AppRoutes
+      AppRoutes,
+      FormsModule
    ],
-   providers: [],
+   providers: [BookService, SendService],
    bootstrap: [
       AppComponent
    ]

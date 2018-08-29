@@ -15,9 +15,9 @@
 					<label for="exampleInputPassword1">
 						Kindle Email
 					</label>
-					<input type="email" class="form-control" id="exampleInputPassword1" />
+					<input type="email" class="form-control" name="exampleInputPassword1" [(ngModel)]="email"/>
 				</div>
-				<button type="submit" class="btn btn-secondary">
+				<button type="submit" class="btn btn-secondary" (click)="sendEmail()">
 					Push
 				</button>
 			</form>

@@ -1,6 +1,6 @@
 
 
-<table class="table">
+<table class="table  table-bordered">
   <thead>
     <tr>
       <th>
@@ -23,13 +23,13 @@
         {{page}}
       </td>
       <td>
-        {{book.name}}
+        {{book.bookName}}
       </td>
       <td>
-        {{book.author}}
+        {{book.bookAuthor}}
       </td>
       <td>
-        <button type="button" class="btn btn-secondary" (click)="pushBook(book.name)">Push</button>
+        <button type="button" class="btn btn-secondary" (click)="pushBook(book.id)">Push</button>
       </td>
     </tr>
   </tbody>

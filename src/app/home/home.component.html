@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8" *ngIf="pageNumber" >
       <router-outlet></router-outlet>
-      <ngb-pagination [collectionSize]="120" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"
+      <ngb-pagination [collectionSize]="pageNumber" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"
       (pageChange)="selectPage()">
       </ngb-pagination>
     </div>
