@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,7 +9,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  public bookList = [{'name': '朝圣者', 'author': '不详'}, {'name': '河神', 'author': '天下霸唱'}];
+
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
   }
@@ -17,4 +20,7 @@ export class HomeComponent implements OnInit {
 
   }
 
+  pushBook(bookName: string) {
+    this.router.navigateByUrl('/push/' + bookName);
+  }
 }

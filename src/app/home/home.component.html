@@ -18,21 +18,20 @@
             </th>
           </tr>
         </thead>
-        <tbody>
 
-
+        <tbody *ngFor="let book of bookList" >
           <tr class="table-success">
             <td>
               2
             </td>
             <td>
-              TB - Monthly
+              {{book.name}}
             </td>
             <td>
-              02/04/2012
+              {{book.author}}
             </td>
             <td>
-              <button type="button" class="btn btn-success">Push</button>
+              <button type="button" class="btn btn-success" (click)="pushBook(book.name)">Push</button>
             </td>
           </tr>
 
