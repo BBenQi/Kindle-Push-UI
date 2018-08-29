@@ -9,6 +9,7 @@ import {RouterModule} from '@angular/router';
 import { PushComponent } from './push/push.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { BookListComponent } from './book-list/book-list.component';
+import { AboutKindlePushComponent } from './about-kindle-push/about-kindle-push.component';
 
 @NgModule({
    declarations: [
@@ -16,7 +17,8 @@ import { BookListComponent } from './book-list/book-list.component';
       HomeComponent,
       PushComponent,
       AboutMeComponent,
-      BookListComponent
+      BookListComponent,
+      AboutKindlePushComponent
    ],
    imports: [
       BrowserModule,

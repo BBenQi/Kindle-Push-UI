@@ -9,8 +9,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
+  // 当前位于第几页book
+  public page = 1;
 
-  public page = 2;
+  /**
+   * 数据库中一共有多少页
+   */
+  public pageNumber: number;
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {

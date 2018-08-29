@@ -21,8 +21,18 @@ export class BookListComponent implements OnInit {
         this.page = params.page;
       }
     );
+
+    /**
+     * TODO
+     * 从数据库中分页获取bookList
+     * this.bookList = service.getBookList();
+     */
   }
 
+  /**
+   * 跳转到推送书籍的界面
+   * @param bookName 要推送书籍的名称
+   */
   pushBook(bookName: string) {
     this.router.navigateByUrl('/push/' + bookName);
   }

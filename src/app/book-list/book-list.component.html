@@ -18,7 +18,7 @@
     </tr>
   </thead>
   <tbody *ngFor="let book of bookList" >
-    <tr class="table-success">
+    <tr class="table-active">
       <td *ngIf="page" >
         {{page}}
       </td>
@@ -29,7 +29,7 @@
         {{book.author}}
       </td>
       <td>
-        <button type="button" class="btn btn-success" (click)="pushBook(book.name)">Push</button>
+        <button type="button" class="btn btn-secondary" (click)="pushBook(book.name)">Push</button>
       </td>
     </tr>
   </tbody>
